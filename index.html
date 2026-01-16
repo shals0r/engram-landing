@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Engram — Browser automation without runtime AI</title>
+    <title>Engram - Browser automation without runtime AI</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -919,14 +919,63 @@
         }
 
         @media (max-width: 600px) {
+            html, body {
+                overflow-x: hidden;
+            }
+
+            .hero {
+                padding-top: 80px;
+                padding-bottom: 40px;
+                min-height: auto;
+            }
+
+            .hero::before {
+                width: 100%;
+            }
+
+            .hero-content {
+                margin-bottom: 32px;
+            }
+
+            .hero-demo {
+                max-width: 100%;
+                width: 100%;
+            }
+
+            .demo-content {
+                padding: 16px;
+                min-height: auto;
+            }
+
             .demo-phases {
                 flex-direction: column;
+                align-items: center;
                 gap: 24px;
+            }
+
+            .phase {
+                width: 100%;
             }
 
             .phase-arrow {
                 transform: rotate(90deg);
                 padding: 0;
+                justify-content: center;
+            }
+
+            .phase-visual {
+                min-height: 100px;
+                padding: 10px;
+                font-size: 10px;
+            }
+
+            section {
+                padding: 80px 0;
+            }
+
+            th, td {
+                padding: 12px 10px;
+                font-size: 12px;
             }
 
             .cta-form {
@@ -937,6 +986,68 @@
                 flex-direction: column;
                 gap: 24px;
                 text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero-subtitle {
+                font-size: 14px;
+            }
+
+            .demo-header {
+                padding: 10px 12px;
+            }
+
+            .demo-content {
+                padding: 12px;
+            }
+
+            .phase-icon {
+                width: 36px;
+                height: 36px;
+            }
+
+            .phase-label {
+                font-size: 10px;
+            }
+
+            .code-line {
+                font-size: 9px;
+            }
+
+            .step {
+                grid-template-columns: 36px 1fr;
+                gap: 16px;
+                padding: 32px 0;
+            }
+
+            .step-number {
+                font-size: 28px;
+            }
+
+            .cta-section {
+                padding: 100px 0;
+            }
+
+            th, td {
+                padding: 10px 8px;
+                font-size: 11px;
+            }
+
+            td:first-child {
+                font-size: 10px;
             }
         }
     </style>
