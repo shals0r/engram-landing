@@ -1682,23 +1682,23 @@
             // Check for reduced motion preference
             const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+            // Particles are decorative - respect reduced motion preference
             if (!prefersReducedMotion) {
-                // Initialize particle system
                 const canvas = document.getElementById('particle-canvas');
                 if (canvas) {
                     new ParticleSystem(canvas);
                 }
 
-                // Initialize hero demo
-                new HeroDemo();
-
-                // Initialize magnetic buttons (desktop only)
+                // Magnetic buttons (desktop only)
                 if (window.innerWidth > 1024) {
                     document.querySelectorAll('.hero-cta, .nav-cta, .cta-button').forEach(btn => {
                         new MagneticButton(btn);
                     });
                 }
             }
+
+            // Hero demo is essential content - always run
+            new HeroDemo();
 
             // Always initialize scroll reveal
             new ScrollReveal();
